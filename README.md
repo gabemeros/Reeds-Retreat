@@ -1,6 +1,6 @@
-# Giovanni's Lodge, a Human Interface Computing Project
+# Reed's Resort, an Intro to Database Project
 
-Welcome to Giovanni’s Lodge - your ultimate destination for an unforgettable experience.
+Welcome to Reed's Resort - your ultimate destination for an unforgettable experience.
 
 ## Requirements
 
