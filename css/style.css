@@ -126,7 +126,7 @@ body {
 }
 
 .navbar .logo {
-    transform: scale(.75);
+    transform: scale(.6);
     transform-origin: left;
     padding: 10px;
     float: left;
