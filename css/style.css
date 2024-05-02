@@ -223,7 +223,10 @@ body {
 }
 
 .lodge-text h2 {
+    font-family: Brush Script MT;
     margin: 1vh 0;
+    color: #F9D864;
+    font-size: 4vw;
 }
 
 .lodge-text p {
