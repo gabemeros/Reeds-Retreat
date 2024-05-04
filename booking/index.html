@@ -29,13 +29,9 @@
         </a>
     </ul>
 
-
-    
-
     <section class="header">
         <img src="../img/booking-header.jpg" alt="Header Image">
         <h1>Start your adventure!</h1>
-
     </section>
 
     <div id="toastBox"></div>
@@ -43,17 +39,16 @@
     <section class="booking-content">
         <div class="container">
             <div class="content-split">
-
                 <div class="row-left">
                     <div class="cabin-selection">
                         <h3>Select your cabin</h3>
                         <div class="dropdown">
                             <select name="cabin" id="enterCabin">
                                 <option> </option>
-                                <option value="Dreamcatcher">Dreamcatcher</option>
-                                <option value="Rising Sun">Rising Sun</option>
-                                <option value="Magnolia">Magnolia</option>
-                                <option value="Rockpath">Rockpath</option>
+                                <option value="1">Dreamcatcher</option>
+                                <option value="2">Rising Sun</option>
+                                <option value="3">Magnolia</option>
+                                <option value="4">Rockpath</option>
                             </select>
                         </div>
                         <img src="https://columbiawoodlands.com/assets/images/Dreamcatcher8.png" id="dreamcatcherImage" class="cabin-image">
@@ -68,30 +63,34 @@
                 <div class="row-right">
                     <span>
                         <h3>Booking information</h3>
-                        <form action="">
-                            <input type="text" placeholder="Name" id="enterName">
-                            <input type="email" placeholder="Email" id="enterEmail">
-                            <input type="phone" placeholder="Phone (Optional)" id="enterPhone">
-                            <input type="date" placeholder="Date" id="enterDate">
-                            <textarea type="text" rows="8" placeholder="Message (optional)" id="enterMessage"></textarea>
+                        <form action="submit_booking.php" method="post">
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="email" name="email" placeholder="Email">
+                            <input type="text" name="phone" placeholder="Phone (Optional)">
+                            <input type="date" name="start_date" placeholder="Start Date">
+                            <input type="date" name="end_date" placeholder="End Date">
+                            <textarea name="message" rows="8" placeholder="Message (optional)"></textarea>
+                            <input type="hidden" name="cabin_id" id="selectedCabinId">
+                            <button type="submit" class="lodging-button">Send</button>
                         </form>
-                        <button class="lodging-button" onclick="showToast()" id="sendButton">Send</button>
                     </span>
                 </div>
             </div>
             <div class="content-split">
                 <div class="row-left">
-                        <h3>Take me there!</h3>
-                        <a href="https://www.google.com/maps/dir//Columbia+Woodlands+6593+Mckracken+Dr+NW+Dover,+OH+44622/@40.5779503,-81.5086791,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8836e2f8f686ae35:0xb85ee71ad401a3dc!2m2!1d-81.5086791!2d40.5779503?entry=ttu" target="_blank">
-                        <button class="lodging-button">Directions</button></a>
+                    <h3>Take me there!</h3>
+                    <a href="https://www.google.com/maps/dir//Columbia+Woodlands+6593+Mckracken+Dr+NW+Dover,+OH+44622/@40.5779503,-81.5086791,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8836e2f8f686ae35:0xb85ee71ad401a3dc!2m2!1d-81.5086791!2d40.5779503?entry=ttu"
+                        target="_blank">
+                        <button class="lodging-button">Directions</button>
+                    </a>
                 </div>
                 <div class="row-right">
                     <h3>Check out our socials!</h3>
-                        <div class="socials">
-                            <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
-                            <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"></a>
-                            <a href="https://www.twitter.com/" target="_blank" class="fa-brands fa-x-twitter"></a>
-                        </div>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
+                        <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"></a>
+                        <a href="https://www.twitter.com/" target="_blank" class="fa-brands fa-x-twitter"></a>
+                    </div>
                 </div>
             </div>
 
@@ -104,7 +103,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../js/bookingImages.js"></script>
-    <script type="module" src="../js/database.js"></script>
 </body>
 
 </html>
