@@ -8,7 +8,7 @@ $start_date = $_POST['start_date'];
 $end_date = $_POST['end_date'];
 $cabin_id = $_POST['cabin_id'];
 
-$sql = "INSERT INTO Cabin_Booking (customer_id, cabin_id, start_date, end_date, message) 
+$sql = "INSERT INTO customer_booking (customer_id, cabin_id, start_date, end_date) 
         VALUES ('$name', '$email', '$phone', '$start_date', '$end_date')";
 
 if ($conn->query($sql) === TRUE) {
