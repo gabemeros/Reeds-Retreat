@@ -25,7 +25,7 @@ $password = "5pVKqzx2";
 	       echo "<table><tr><th>Customer_ID</th><th>Name</th><th>Phone</th><th>Click To Remove</th></tr>";
 	      // output data of each row into a table row
 	      while($row = $result->fetch_assoc()) {
-	          echo "<tr><td>".$row["customer_id"]."</td><td>".$row["Name"]."</td><td> ".$row["Phone"]."</td><td><a href=\"delfaculty.php?form_submitted=1&customer_id=".$row["customer_id"]."\">Remove</a></td></tr>";
+	          echo "<tr><td>".$row["customer_id"]."</td><td>".$row["Name"]."</td><td> ".$row["Phone"]."</td><td><a href=\"employee.php?form_submitted=1&customer_id=".$row["customer_id"]."\">Remove</a></td></tr>";
 	          }
 	     echo "</table>"; // close the table
 	     echo "There are ". $result->num_rows . " results.";
@@ -45,7 +45,7 @@ $password = "5pVKqzx2";
 <?php
 displayFaculty();
 ?>
-<form action="delfaculty.php" method=get>
+<form action="employee.php" method=get>
                 <input type="hidden" name="form_submitted" >
                 <input type="hidden" name="customer_id" >
 </form>
@@ -65,7 +65,7 @@ if (isset($_GET["form_submitted"])){
  else {
 	 echo "<b> Error: Something went wrong with the form.</b>";
  }
-header("Refresh:0;url=delfaculty.php"); //refresh the page to show the faculty is gone
+header("Refresh:0;url=employee.php"); //refresh the page to show the faculty is gone
 }
    $conn->close();
   ?> <!-- this is the end of our php code -->
