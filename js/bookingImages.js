@@ -32,16 +32,16 @@ function updateCabinInfo(selectedCabin) {
     });
 
     switch (selectedCabin) {
-        case 'Dreamcatcher':
+        case "13230" :
             document.getElementById('dreamcatcherImage').style.display = 'inline-block';
             break;
-        case 'Rising Sun':
+        case "13256" :
             document.getElementById('risingSunImage').style.display = 'inline-block';
             break;
-        case 'Magnolia':
+        case "13378":
             document.getElementById('magnoliaImage').style.display = 'inline-block';
             break;
-        case 'Rockpath':
+        case "13567":
             document.getElementById('rockpathImage').style.display = 'inline-block';
             break;
         default:
@@ -58,17 +58,17 @@ function updateTotalPrice(selectedCabin, selectedPackage) {
 
     // Define cabin prices
     var cabinPrices = {
-        'Dreamcatcher': 175.00,
-        'Rising Sun': 85.00,
-        'Magnolia': 200.00,
-        'Rockpath': 250.00
+        '13230': 175.00,
+        '13256': 85.00,
+        '13378': 200.00,
+        '13567': 250.00
     };
 
     // Define package prices
     var packagePrices = {
-        'Reed Romance': 300.00,
-        'Adventure Haven': 200.00,
-        'Tranquil Oasis': 150.00
+        '33333': 300.00,
+        '33337': 200.00,
+        '33340': 150.00
     };
 
     // Calculate total price based on the selected cabin and package
