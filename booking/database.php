@@ -5,7 +5,7 @@ $username = "gmeros";
 $password = "5pVKqzx2";
 
 // Create connection
-$conn = new mysqli($servername, $dbname, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
