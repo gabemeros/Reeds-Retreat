@@ -29,6 +29,6 @@ The website allows easy access to information about Giovanni’s Lodge and exped
 
 ## Contributors
 
-
+-[evanmcdermott](https://github.com/Emcd10)
 - [cohenstevens](https://github.com/cohenstevens)
 - [gabemeros](https://github.com/gabemeros)
