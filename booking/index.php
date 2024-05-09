@@ -106,12 +106,7 @@
                         $cabin_id = $_POST['cabin_id'];
                         $event_id = $_POST['package_id'];
                         $guest_count = $_POST['guest_count'];
-                        $total_price = $_POST['totalPrice'];
-
-                        echo "<script>";
-                        echo "console.log('Cabin ID: " . $cabin_id . "');";
-                        echo "console.log('Event ID: " . $event_id . "');";
-                        echo "</script>";
+                        $total_price = $_POST['total_price'];
 
                         $sqlstatement = $conn->prepare("INSERT INTO customer_booking values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                         $sqlstatement->bind_param("isssssiiii", $customer_id, $name, $email, $phone, $start_date, $end_date, $event_id, $cabin_id, $guest_count, $total_price);
