@@ -79,9 +79,9 @@
                         <form action="index.php" method="post">
                             <input type="text" name="name" placeholder="Name">
                             <input type="email" name="email" placeholder="Email">
-                            <input type="text" name="phone" placeholder="Phone (Optional)">
-                            <input type="date" name="start_date" placeholder="Start Date">
-                            <input type="date" name="end_date" placeholder="End Date">
+                            <input type="text" name="phone" placeholder="Phone">
+                            <input type="date" name="start_date" id="start_date" placeholder="Start Date">
+                            <input type="date" name="end_date" id="end_date" placeholder="End Date">
                             <input type="number" name="guest_count" step="1" min="1" max="10" placeholder="Guest Count">
                             <input type="hidden" name="cabin_id" id="cabin_id">
                             <input type="hidden" name="package_id" id="package_id">
