@@ -82,9 +82,12 @@
                             <input type="text" name="phone" placeholder="Phone (Optional)">
                             <input type="date" name="start_date" placeholder="Start Date">
                             <input type="date" name="end_date" placeholder="End Date">
+                            <input type="number" name="guest_count" step="1" min="1" max="10" placeholder="Guest Count">
                             <input type="hidden" name="cabin_id" id="cabin_id">
                             <input type="hidden" name="package_id" id="package_id">
-                            <button type="submit">Submit</button>
+                            <input type="hidden" name="total_price" id="total_price">
+                            <br>
+                            <button type="submit" class="lodging-button">Submit</button>
                         </form>
                     </span>
                     <div id="booking-status"></div>
@@ -102,14 +105,16 @@
                         $end_date = $_POST['end_date'];
                         $cabin_id = $_POST['cabin_id'];
                         $event_id = $_POST['package_id'];
+                        $guest_count = $_POST['guest_count'];
+                        $total_price = $_POST['totalPrice'];
 
                         echo "<script>";
                         echo "console.log('Cabin ID: " . $cabin_id . "');";
                         echo "console.log('Event ID: " . $event_id . "');";
                         echo "</script>";
 
-                        $sqlstatement = $conn->prepare("INSERT INTO customer_booking values(?, ?, ?, ?, ?, ?, ?, ?)");
-                        $sqlstatement->bind_param("isssssii", $customer_id, $name, $email, $phone, $start_date, $end_date, $event_id, $cabin_id);
+                        $sqlstatement = $conn->prepare("INSERT INTO customer_booking values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                        $sqlstatement->bind_param("isssssiiii", $customer_id, $name, $email, $phone, $start_date, $end_date, $event_id, $cabin_id, $guest_count, $total_price);
 
                         if ($sqlstatement->execute()) {
                             echo "<script>document.getElementById('booking-status').innerHTML = 'Booking successfully submitted!';</script>";

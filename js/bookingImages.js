@@ -84,4 +84,9 @@ function updateTotalPrice(selectedCabin, selectedPackage) {
     } else {
         totalElement.textContent = '';
     }
+
+    var TOTAL = totalPrice.toFixed(2);
+    console.log(TOTAL);
+
+    document.getElementById('total_price').value = TOTAL;
 }
