@@ -76,7 +76,7 @@
                 <div class="row-right">
                     <span>
                         <h3>Booking information</h3>
-                        <form action="submit_booking.php" method="post">
+                        <form action="index.php" method="post">
                             <input type="text" name="name" placeholder="Name">
                             <input type="email" name="email" placeholder="Email">
                             <input type="text" name="phone" placeholder="Phone (Optional)">
@@ -87,6 +87,38 @@
                             <button type="submit">Submit</button>
                         </form>
                     </span>
+                    <div id="booking-status"></div>
+                    <?php
+
+                        include 'database.php';
+
+                        $min_customer_id = 100; // Assuming a minimum starting ID
+                        $max_customer_id = 999999; // Assuming a maximum ID range
+                        $customer_id = rand($min_customer_id, $max_customer_id);
+                        $name = $_POST['name'];
+                        $email = $_POST['email'];
+                        $phone = $_POST['phone'];
+                        $start_date = $_POST['start_date'];
+                        $end_date = $_POST['end_date'];
+                        $cabin_id = $_POST['cabin_id'];
+                        $event_id = $_POST['package_id'];
+
+                        echo "<script>";
+                        echo "console.log('Cabin ID: " . $cabin_id . "');";
+                        echo "console.log('Event ID: " . $event_id . "');";
+                        echo "</script>";
+
+                        $sqlstatement = $conn->prepare("INSERT INTO customer_booking values(?, ?, ?, ?, ?, ?, ?, ?)");
+                        $sqlstatement->bind_param("isssssii", $customer_id, $name, $email, $phone, $start_date, $end_date, $event_id, $cabin_id);
+
+                        if ($sqlstatement->execute()) {
+                            echo "<script>document.getElementById('booking-status').innerHTML = 'Booking successfully submitted!';</script>";
+                        } else {
+                            echo "<script>document.getElementById('booking-status').innerHTML = 'Error: " . $conn->error . "';</script>";
+                        }
+
+                        $sqlstatement->close();
+                    ?>
                 </div>
             </div>
             <div class="content-split">
