@@ -84,7 +84,7 @@
                             <input type="date" name="end_date" placeholder="End Date">
                             <input type="hidden" name="cabin_id" id="cabin_id">
                             <input type="hidden" name="package_id" id="package_id">
-                            <button type="submit">Submit</button>
+                            <button class="lodging-button">Submit</button>
                         </form>
                     </span>
                     <div id="booking-status"></div>
