@@ -10,6 +10,8 @@ document.getElementById('enterCabin').addEventListener('change', function () {
 
     // Update the total price based on the selected cabin and package
     updateTotalPrice(selectedCabin, selectedPackage);
+
+    document.getElementById('cabin_id').value = selectedCabin;
 });
 
 document.getElementById('enterPackage').addEventListener('change', function () {
@@ -21,6 +23,8 @@ document.getElementById('enterPackage').addEventListener('change', function () {
     if (selectedCabin) {
         updateTotalPrice(selectedCabin, selectedPackage);
     }
+
+    document.getElementById('package_id').value = selectedPackage;
 });
 
 function updateCabinInfo(selectedCabin) {

@@ -10,8 +10,8 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $start_date = $_POST['start_date'];
 $end_date = $_POST['end_date'];
-$cabin_id = $_POST['cabin'];
-$event_id = $_POST['event'];
+$cabin_id = $_POST['cabin_id'];
+$event_id = $_POST['package_id'];
 
 echo "<script>";
 echo "console.log('Cabin ID: " . $cabin_id . "');";

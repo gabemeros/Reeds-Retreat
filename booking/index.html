@@ -79,10 +79,11 @@
                         <form action="submit_booking.php" method="post">
                             <input type="text" name="name" placeholder="Name">
                             <input type="email" name="email" placeholder="Email">
-                            <input type="text" name="phone" placeholder="Phone">
-                            <input type="text" name="start_date" placeholder="Start Date (YYYY-MM-DD)">
-                            <input type="text" name="end_date" placeholder="End Date (YYYY-MM-DD)">
-                            <input type="hidden" name="cabin" id="selectedCabinId">
+                            <input type="text" name="phone" placeholder="Phone (Optional)">
+                            <input type="date" name="start_date" placeholder="Start Date">
+                            <input type="date" name="end_date" placeholder="End Date">
+                            <input type="hidden" name="cabin_id" id="cabin_id">
+                            <input type="hidden" name="package_id" id="package_id">
                             <button type="submit">Submit</button>
                         </form>
                     </span>
@@ -112,8 +113,7 @@
     <section class="footer">
         <h2><a href="../booking#">© Reed's Retreat - (330) 131 1542</a></h2>
     </section>
-    <script>
-        </script>
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../js/bookingImages.js"></script>
 </body>
