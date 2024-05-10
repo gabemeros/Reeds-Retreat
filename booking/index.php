@@ -114,7 +114,8 @@
                         if ($sqlstatement->execute()) {
                             echo "<script>document.getElementById('booking-status').innerHTML = 'Booking successfully submitted!';</script>";
                         } else {
-                            echo "<script>document.getElementById('booking-status').innerHTML = 'Error: " . $conn->error . "';</script>";
+                            //echo "<script>document.getElementById('booking-status').innerHTML = 'Error: " . $conn->error . "';</script>";
+                            echo "<script>document.getElementById('booking-status').innerHTML = 'An error has occurred""';</script>";
                         }
 
                         $sqlstatement->close();
