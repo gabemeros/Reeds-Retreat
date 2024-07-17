@@ -1,4 +1,4 @@
-# Reed's Resort, an Intro to Database Project
+# Reed's Retreat, an Intro to Database Project
 
 Welcome to Reed's Resort - your ultimate destination for an unforgettable experience.
 
