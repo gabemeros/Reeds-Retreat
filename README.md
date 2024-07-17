@@ -1,6 +1,6 @@
 # Reed's Retreat, an Intro to Database Project
 
-Welcome to Reed's Resort - your ultimate destination for an unforgettable experience.
+Welcome to Reed's Retreat - your ultimate destination for an unforgettable experience.
 
 ## Requirements
 
