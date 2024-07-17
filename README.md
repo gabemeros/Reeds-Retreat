@@ -14,7 +14,7 @@ OR
 ## Usage & Installation
 
 Web Browser Method:
-1. Open https://hic-website.vercel.app/
+1. Open https://cohenstevens.github.io/reeds-retreat/
 2. Explore!
 
 Visual Studio + Live Server Extension Method
