@@ -25,7 +25,7 @@ Visual Studio + Live Server Extension Method
 4. Explore!
 
 ## What this website is intended to do
-The website allows easy access to information about Giovanni’s Lodge and expedites the booking process. The website highlights the key features of Giovanni's Lodge, ensuring potential guests have a comprehensive understanding of what the lodge is like. Users can also book directly from our website.
+The website allows easy access to information about Reed's Retreat and expedites the booking process. The website highlights the key features of Reeds-Retreat, ensuring potential guests have a comprehensive understanding of what the lodge is like. Users can also book directly from our website.
 
 ## Contributors
 
